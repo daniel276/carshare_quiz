@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Car Sharing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  var getUsername = document.forms['user_login']['usr'].value;
+  var password = document.forms["user_login"]["pass"].value;
+  var usr_passenger= "user1";
+  var ps_passenger= "pass1";
+  var usr_driver="user2";
+  var ps_driver="pass2";
+
+function login(){
+
+  if(getUsername==usr_passenger && password==ps_passenger){
+    alert("true");
+    return true;
+  }else {
+    alert("invalid password!");
+    return false;
+  }
+
+  function passenger(){
+    window.location="passengerPage.html";
+  }
+}
+</script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="navbar-header">
+    <a href="#" class="navbar-brand">Website</a>
+    </div>
+
+    <div class="nav navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </div>
+
+    </nav>
+    <div class="container-fluid">
+    <div class="jumbotron">
+      <h2>Car Sharing</h2>
+      <p>This is Car Sharing Web where you can ride sharing with stranger and make out</p>
+    </div>
+
+    <form name="user_login">
+  <div class="login_form" method="post" >
+    <label for="exampleInputEmail1">Username</label>
+    <input type="text" name="usr" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password"name="pass" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <button type="submit" onclick="login();" class="btn btn-primary">Submit</button>
+</form>
+<br>
+<h1><a href="passengerPage.html">GO TO PASSENGER PAGE</a></h1>
+<h1><a href="driverPage.html">GO TO DRIVER PAGE</a></h1>
+
+  </div>
+
+
+  </body>
+</html>
